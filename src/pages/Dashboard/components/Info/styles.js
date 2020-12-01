@@ -23,6 +23,7 @@ export const Container = styled.div`
   .advantages {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     
     svg {
       color: white;

@@ -55,6 +55,7 @@ export const Container = styled.div`
 
     h1 {
       font-size: 40px;
+      text-align: center;
     }
 
     h2 {
