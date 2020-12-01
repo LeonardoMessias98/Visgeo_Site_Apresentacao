@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import bgHeader from '../../../../assets/visgeo_wallpaper.png';
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,8 +14,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #121212;
+    position: fixed;
+    background: rgba(0,0,0, 0.6);
+    backdrop-filter: blur(6px);
     color: #FFFFFF;
+    z-index: 3;
+
 
     img {
       width: 80px;
@@ -39,18 +41,32 @@ export const Container = styled.div`
   .presentation {
     height: 100%;
     width: 100%;
-    background: url(${bgHeader} ) no-repeat, linear-gradient(45deg, rgb(213 239 255),rgb(190 242 255),rgb(198 255 179));
+    background: linear-gradient(to top,#071716 5%, #0b1e1d ,#0d2120 30%,#0f2422);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-size: contain;
-    animation: colors 37s ease infinite;
+
+    img.logo {
+      animation: breath_logo 10s ease infinite;
+      width: 300px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    img.background {
+      height: 600px;
+      position: absolute;
+      width: 100%;
+      max-width: 1200px;
+    }
 
     h1, h2 {
       font-family: roboto, sans-serif;
       color: #FFFFFF;
       text-shadow: 2px 2px 3px black;
+      z-index: 2;
     }
 
     h1 {
@@ -73,6 +89,7 @@ export const Container = styled.div`
       font-weight: 500;
       cursor: pointer;
       font-size: 18px;
+      z-index: 2;
       transition: .5s all;
     }
 
@@ -96,6 +113,23 @@ export const Container = styled.div`
 
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+    @keyframes breath_logo {
+    0% {
+      width: 300px;
+      opacity: 0.01;
+    }
+
+    50% {
+      width: 450px;
+      opacity: 1;
+    }
+
+    100% {
+      width: 300px;
+      opacity: 0.01;
     }
   }
 `

@@ -10,13 +10,18 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  height: 900px;
 
   .marketing {
     text-align: center;
 
     h1 {
       margin: 10px 0;
+      font-size: 35px;
+    }
+
+    span {
+      font-size: 20px;
     }
   }
 
@@ -37,6 +42,23 @@ export const Container = styled.div`
       text-align: center;
       margin: 20px;
     }
+
+    @keyframes breath {
+    0% {
+      width: 80px;
+      height: 80px;
+    }
+
+    50% {
+      width: 100px;
+      height: 100px;
+    }
+
+    100% {
+      width: 80px;
+      height: 80px;
+    }
+  }
   }
   
 `;

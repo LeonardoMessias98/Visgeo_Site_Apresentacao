@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { BiLock } from 'react-icons/bi';
+import { BiLock, BiHappy } from 'react-icons/bi';
 import { GoSettings } from 'react-icons/go';
 import { BsCloudUpload } from 'react-icons/bs';
+import { FiDatabase } from 'react-icons/fi';
 
 import { Container } from './styles';
 
@@ -33,7 +34,23 @@ const Info = () => {
           <GoSettings />
 
           <p>
-            Permitimos você fazer configurações de para.
+            O usuário possui autonomia, com o sistema DE → PARA ele decide o que será salvo.
+          </p>
+        </section>
+
+        <section>
+          <FiDatabase />
+
+          <p>
+            Utilize o seu banco de dados e tenha mais segurança.
+          </p>
+        </section>
+
+        <section>
+          <BiHappy />
+
+          <p>
+           Sistema simples e intuitivo, desenvolvido pensando nos nossos usuários.
           </p>
         </section>
 
@@ -41,7 +58,7 @@ const Info = () => {
           <BiLock />
 
           <p>
-            Utilize o seu banco de dados e tenha mais segurança.
+            Sistema construido em cima de um token criptografado.
           </p>
         </section>
       </section>
