@@ -9,6 +9,14 @@ import { FiDatabase } from 'react-icons/fi';
 import { Container } from './styles';
 
 const Info = () => {
+  const handleNavigateToDiv = (id) => {
+    const divToScroll = document.querySelector(`#${id}`);
+    if (divToScroll) {
+      divToScroll.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+  }
+
+
   return (
     <Container>
       <section className="marketing">
@@ -20,15 +28,12 @@ const Info = () => {
           Na VisGeo você pode tratar o seus dados de acordo com o seu gosto
         </span>
       </section>
-
-
   
-      <YouTube videoId="hQMvhnpsWpU" />
-      
+      <YouTube videoId="hQMvhnpsWpU" />      
       
       <section className="advantages">     
         <section>
-          <BsCloudUpload />
+          <BsCloudUpload onClick={() => handleNavigateToDiv('carga')}/>
           
           <p>
             Faça carga e descarrga de dados geográficos (ponto, linha e polígono).
@@ -36,7 +41,7 @@ const Info = () => {
         </section>
 
         <section>
-          <GoSettings />
+          <GoSettings onClick={() => handleNavigateToDiv('de-para')}/>
 
           <p>
             O usuário possui autonomia, com o sistema DE → PARA ele decide o que será salvo.
@@ -44,7 +49,7 @@ const Info = () => {
         </section>
 
         <section>
-          <FiDatabase />
+          <FiDatabase onClick={() => handleNavigateToDiv('banco')}/>
 
           <p>
             Utilize o seu banco de dados e tenha mais segurança.
@@ -52,7 +57,7 @@ const Info = () => {
         </section>
 
         <section>
-          <BiHappy />
+          <BiHappy onClick={() => handleNavigateToDiv('simples')}/>
 
           <p>
            Sistema simples e intuitivo, desenvolvido pensando nos nossos usuários.
@@ -60,7 +65,7 @@ const Info = () => {
         </section>
 
         <section>
-          <BiLock />
+          <BiLock onClick={() => handleNavigateToDiv('segurança')}/>
 
           <p>
             Sistema construido em cima de um token criptografado.

@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-import background_app from '../../../../assets/background.png';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -8,12 +6,35 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 900px;
-  background: linear-gradient(to top, #0b1d1c 10%, #0d2321 35%, #0f2321);
-  
+
+  ${props => props.bgEnable && css `
+    background: #242424;
+  `}
+    
   .content {
     width: 100%;
     height: 100%;
     background-size: cover;
+    color: #FFF;
     max-width: 1800px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1, p {
+      font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      margin: 10px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
+    }
   }
 `;

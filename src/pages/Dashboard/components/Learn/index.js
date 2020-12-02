@@ -2,11 +2,20 @@ import React from 'react'
 
 import { Container } from './styles';
 
-const Learn = () => {
+const Learn = ({title, descriptions, bgEnable, ...props}) => {
   return (
-    <Container>
+    <Container
+      bgEnable={bgEnable}
+      {...props}
+    >
       <div className="content">
-        learn
+        <h1>
+          {title}
+        </h1>
+
+        <p>
+          {descriptions.map(description => description)}
+        </p>
       </div>
     </Container>
   )
