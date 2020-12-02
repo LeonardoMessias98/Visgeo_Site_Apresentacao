@@ -31,7 +31,7 @@ const Header = () => {
         />
 
         <h1>
-          Para seus problemas, nos temos a solução
+          Seu shapefile a qualquer momento.
         </h1>
         <h2>
           VisGEO

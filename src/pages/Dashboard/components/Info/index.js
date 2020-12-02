@@ -1,4 +1,5 @@
 import React from 'react'
+import YouTube from 'react-youtube';
 
 import { BiLock, BiHappy } from 'react-icons/bi';
 import { GoSettings } from 'react-icons/go';
@@ -20,6 +21,10 @@ const Info = () => {
         </span>
       </section>
 
+
+  
+      <YouTube videoId="hQMvhnpsWpU" />
+      
       
       <section className="advantages">     
         <section>
