@@ -4,6 +4,7 @@ export const Container = styled.div`
   h1,h2, p, span {
     color: #FFFFFF;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.2s;
   }
 
   display: flex;
@@ -31,16 +32,25 @@ export const Container = styled.div`
     justify-content: center;
     
     svg {
+      cursor: pointer;
       color: white;
       width: 80px;
       height: 80px;
       margin-bottom: 10px;
+      transition: 0.2s;
     }
 
     section {
       width: 200px;
       text-align: center;
       margin: 20px;
+    }
+
+    section:hover {
+      svg, p {
+        color: #348c98;
+      }
+      
     }
 
     @keyframes breath {
@@ -60,5 +70,4 @@ export const Container = styled.div`
     }
   }
   }
-  
 `;
