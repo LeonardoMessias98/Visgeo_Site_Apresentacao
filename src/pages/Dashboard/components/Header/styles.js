@@ -118,8 +118,8 @@ export const Container = styled.div`
 
     @keyframes breath_logo {
     0% {
-      width: 300px;
-      opacity: 0.01;
+      width: 350px;
+      opacity: 0.3;
     }
 
     50% {
@@ -128,8 +128,8 @@ export const Container = styled.div`
     }
 
     100% {
-      width: 300px;
-      opacity: 0.01;
+      width: 350px;
+      opacity: 0.3;
     }
   }
 `
