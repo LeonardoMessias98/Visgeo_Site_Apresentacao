@@ -37,7 +37,7 @@ const Header = () => {
           VisGEO
         </h2>
 
-        <button>Saiba mais</button>
+        {/* <button>Saiba mais</button> */}
       </section>
 
     </Container>
