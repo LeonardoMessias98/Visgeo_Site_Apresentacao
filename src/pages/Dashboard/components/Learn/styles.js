@@ -2,21 +2,35 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  ${props => props.inverted 
+    && css `
+      flex-direction: row-reverse;
+    `
+  }
+
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  max-width: 1250px;
   height: 900px;
 
-  ${props => props.bgEnable && css `
-    background: #242424;
-  `}
-    
+  .gif_animado {
+    img {
+      padding: 20px;
+      width: 500px;
+      height: 300px;
+    }
+  }
+
   .content {
     width: 100%;
     height: 100%;
     background-size: cover;
     color: #FFF;
-    max-width: 1800px;
+    max-width: 600px;
+    text-align: start;
 
     display:flex;
     flex-direction: column;
@@ -24,17 +38,34 @@ export const Container = styled.div`
     align-items: center;
 
     h1, p {
-      font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-weight: 600;
+      font-family: Roboto;
+      font-style: normal;
+      width: 100%;
       margin: 10px;
     }
 
     h1 {
-      font-size: 35px;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 82px;
+
+      color: #FFFFFF;
     }
 
     p {
-      font-size: 20px;
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 41px;
+      display: flex;
+      align-items: center;
     }
+  }
+
+  @media (max-width: 1155px) {
+    .content {
+      height: max-content;
+    }
+
+    flex-direction: column-reverse;
   }
 `;
