@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+![ViaGeo - Capa](https://user-images.githubusercontent.com/56441371/93688444-5704dc80-fa9c-11ea-8bed-fdac35ce7337.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **VisGEO** nasceu através da necessidade de resolução de um problema do cliente parceiro com a Fatec São José dos Campos - Prof. Jessen Vidal.
 
-## Available Scripts
+Este é um repositório do <a href="https://visgeo.vercel.app/">site de apresentação</a>, para acessar o projeto principal <a href="https://github.com/JDanrley/VisGeo-ETL">clique aqui</a>
 
-In the project directory, you can run:
+### Objetivo
 
-### `yarn start`
+Desenvolver uma aplicação web, com uma ferramenta ETL de baixo custo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### O Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O Projeto consiste no desenvolvimento de um sistema web ETL¹ no qual dados georreferenciados serão extraídos de shapefiles², transformados e carregados em banco de dados geográfico³, no caso atual, PostGis. Assim como o processo inverso.
 
-### `yarn test`
+### Time
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Evandro Braga - PO - [LinkedIn](https://www.linkedin.com/in/evandro-rodrigues-de-melo-braga-1aa677149/)
+- José Danrley - Scrum Master - [LinkedIn](https://www.linkedin.com/in/jos%C3%A9-danrley-069827191/)
+- Cristiane Rodrigues - DEV Team - [LinkedIn](https://www.linkedin.com/in/cristiane-rodrigues-20b3b61b2)
+- Leonardo Messias  - DEV Team - [LinkedIn](https://www.linkedin.com/in/leonardo-messias-89568818a/)
+- Luis Guilherme - DEV Team - [LinkedIn](https://www.linkedin.com/mwlite/in/luis-guilherme-a17b58185)
+- Matheus Amauri - DEV Team - [LinkedIn](https://www.linkedin.com/in/matheus-campos-9b8550192)
+- Pedro Mendonça - DEV Team - [LinkedIn](https://www.linkedin.com/in/pedro-mendon%C3%A7a-3a13541a4/)
+- Raquel Ribeiro - DEV Team - [LinkedIn](https://www.linkedin.com/in/raquel-rodrigues-ribeiro-a9537818b)
+- Washington Henrique - DEV Team - [LinkedIn](https://www.linkedin.com/in/justhenrique/)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Requisitos Funcionais
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Carga de dados geográficos (ponto, linha e polígono) e seus atributos alfanuméricos em tabelas existentes de banco de dados geográficos.
+- Recuperação de dados geográficos (ponto, linha e polígono) e seus atributos alfanuméricos armazenados em banco de dados geográficos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Requisitos Não Funcionais:
 
-### `yarn eject`
+- Banco de Dados Geográficos PostGIS;
+- Documentações.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Backlog do Projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Cards](https://user-images.githubusercontent.com/56441371/98672721-ff188280-2334-11eb-9050-4b434acba3a4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Tecnologias Utilizadas
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![VisGeo - Techs](https://user-images.githubusercontent.com/56441371/93688825-3c803280-fa9f-11ea-9408-bd07d27aad71.png)
 
-## Learn More
+- De acordo com os requisitos não funcionais levantados e alinhamento com nosso cliente, optamos por utilizar Java no CRUD de usuários.
+- A  API que trata do processo ETL foi desenvolvida em Python, com auxílio do Framework Flask, e das bibliotecas PyShp e postgresql.
+- O front-end foi desenvolvido com React usando as bibliotecas Ant Design, Axios, Bootstrap, React-Bootstrap, React Icons e StyledComponents.
+- Os arquivos shapefiles são carregados em Banco de Dados Postgres, utilizando a extensão para arquivos geográficos, PostGis.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Definições
 
-### Code Splitting
+¹ ETL - Vem do inglês Extract, Transform and Load (Extrair, transformar e carregar), consiste em um processo de direção dos dados até o armazenamento. A ele corresponde as ações de extração, tratamento e inserção na base de dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+² Shapefiles – É um formato de armazenamento de dados vetoriais, formado por aqrquivos com múltiplas extensões. Pode armazenar geometria do tipo ponto, polígono ou linha. No shapefile três arquivos são obrigatórios e devem estar na mesma pasta, ter o mesmo nome; estes arquivos são diferentes entre si por conta de sua extensão, sendo elas .dbf, .shp e .shx. Já os arquivos com extensão .cpg e .prj são facultativos.
 
-### Analyzing the Bundle Size
+- .shp – geometria da operação
+- .shx – índice da geometria do recurso
+- .dbf – informações de atributo
+- .prj - sistema de coordenadas e informações de projeção
+- .cpg - descreve um conjunto de caracteres para exibir texto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+³ Banco de dados relacional
+É um tipo de banco de dados que armazena e fornece acesso a pontos de dados relacionados entre si, de modo intuitivo e direto.
