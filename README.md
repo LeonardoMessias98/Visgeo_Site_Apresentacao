@@ -25,20 +25,6 @@ O Projeto consiste no desenvolvimento de um sistema web ETL¹ no qual dados geor
 - Washington Henrique - DEV Team - [LinkedIn](https://www.linkedin.com/in/justhenrique/)
 
 
-### Requisitos Funcionais
-
-- Carga de dados geográficos (ponto, linha e polígono) e seus atributos alfanuméricos em tabelas existentes de banco de dados geográficos.
-- Recuperação de dados geográficos (ponto, linha e polígono) e seus atributos alfanuméricos armazenados em banco de dados geográficos.
-
-### Requisitos Não Funcionais:
-
-- Banco de Dados Geográficos PostGIS;
-- Documentações.
-
-### Backlog do Projeto
-
-![Cards](https://user-images.githubusercontent.com/56441371/98672721-ff188280-2334-11eb-9050-4b434acba3a4.png)
-
 ### Tecnologias Utilizadas
 
 ![VisGeo - Techs](https://user-images.githubusercontent.com/56441371/93688825-3c803280-fa9f-11ea-9408-bd07d27aad71.png)
